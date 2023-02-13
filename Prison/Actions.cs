@@ -86,19 +86,19 @@ namespace Prison
             {
                 if (persons[i].GetType().Name == "Employee")
                 {
-                    employees[employeesIndex] = (Employee)persons[i];
+                    employees[employeesIndex] = persons[i] as Employee;
                     employeesIndex++;
                 }
 
                 if (persons[i].GetType().Name == "Officer")
                 {
-                    officers[officersIndex] = (Officer)persons[i];
+                    officers[officersIndex] = persons[i] as Officer;
                     officersIndex++;
                 }
 
                 if (persons[i].GetType().Name == "Leadership")
                 {
-                    leaderships[leadershipsIndex] = (Leadership)persons[i];
+                    leaderships[leadershipsIndex] = persons[i] as Leadership;
                     leadershipsIndex++;
                 }
             }
