@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace Prison
 {
+    public enum Gender 
+    {
+        Мужчина, 
+        Женщина,
+    }
+
     internal abstract class Human
     {
         public Human(
             string name,
             string middleName,
             string surname,
-            string gender,
+            Gender gender,
             int age)
         {
             this.Name = name;
@@ -28,13 +34,13 @@ namespace Prison
 
         protected string Surname { get; set; }
 
-        protected string Gender { get; set; }
+        protected Gender Gender { get; set; }
 
         protected int Age { get; set; }
 
         public void Introduce()
         {
-            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + ". \n" +
+            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + ". " + Environment.NewLine +
                 "Я " + this.Gender + " и мне " + this.Age + " лет.");
             Console.WriteLine();
         }

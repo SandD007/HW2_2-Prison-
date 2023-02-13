@@ -14,8 +14,9 @@ namespace Prison
             string name,
             string middleName,
             string surname,
-            string gender,
-            int age)
+            Gender gender,
+            int age,
+            Cell cell)
         : base(name, middleName, surname, gender, age)
         {
             this.Article = article;
@@ -25,17 +26,20 @@ namespace Prison
             this.Surname = surname;
             this.Gender = gender;
             this.Age = age;
+            this.Cell = cell;
         }
 
         protected string Article { get; set; }
 
         protected int TermOfImprisonment { get; set; }
 
+        protected Cell Cell { get; set; }
+
         public new void Introduce()
         {
-            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + ". \n" +
-                "Я " + this.Gender + " и мне " + this.Age + " лет. \n" +
-                "Меня посадили на " + this.TermOfImprisonment + " лет за " + this.Article);
+            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + "." + Environment.NewLine +
+                "Я " + this.Gender + " и мне " + this.Age + " лет. " + Environment.NewLine +
+                "Меня посадили на " + this.TermOfImprisonment + " лет за " + this.Article + ".");
             Console.WriteLine();
         }
     }

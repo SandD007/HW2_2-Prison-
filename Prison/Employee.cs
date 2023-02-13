@@ -17,7 +17,7 @@ namespace Prison
             string middleName,
             string surname,
             int age,
-            string gender,
+            Gender gender,
             string position,
             string duties,
             int salary)
@@ -41,13 +41,13 @@ namespace Prison
 
         public new void Introduce()
         {
-            if (this.Gender == "женщина")
+            if (this.Gender == Gender.Женщина)
             {
                 this.gender = " и я должна ";
             }
 
-            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + ". \n" +
-                "Я " + this.Gender + " и мне " + this.Age + " лет.\n" +
+            Console.WriteLine("Привет, меня зовут " + this.Surname + " " + this.Name + " " + this.MiddleName + ". " + Environment.NewLine +
+                "Я " + this.Gender + " и мне " + this.Age + " лет." + Environment.NewLine +
                 "Я работаю на должности " + this.Position + " c зарплатой " + this.Salary + " гривен" + this.gender + this.Duties);
             Console.WriteLine();
         }

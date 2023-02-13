@@ -15,7 +15,7 @@ namespace Prison
             string middleName,
             string surname,
             int age,
-            string gender,
+            Gender gender,
             string position,
             string duties,
             int salary)
